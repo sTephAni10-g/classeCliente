@@ -12,7 +12,13 @@ app.get("/saudacao/:nome", (req, res) => {
         mensagem: `bom dia ${nome}`
     });
 });
+
+res.json({
+ mensagem:`bom dia ${nome}`
+})
+
 app.listen(porta, () => {
     console.log("servidor no ar");
     console.log("http://localhost:" + porta);
 });
+
